@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Question</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/question.css"/>
+    
+    <script src="assets/js/question.js"></script>
+  </head>
+  
+  <body>
+    <div class="container-fluid">
+      <!-- Embed a story. The embed string consists of two values separated by a forward
+      slash: the author name and the context name.
+      
+      The contents of the <bodY> tag will be copied into this div.
+      Likewise, the <link>, <style>, and <script> tags will be copied from the context's
+      <head> tag into the <head> tag of this document. -->
+      <div data-embed-story="jarrett/example"></div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">The Question</h2>
+        </div>
+      
+        <div class="panel-body">
+          <p>Everything in this panel comes from the question.</p>
+          
+          <button class="btn btn-lg btn-success btn-change-color" data-color="#5cb85c">
+            Switch to Green
+          </button>
+        
+          <button class="btn btn-lg btn-primary btn-change-color" data-color="#337ab7">
+            Switch to Blue
+          </button>
+        
+          <button class="btn btn-lg btn-default btn-min">
+            Min
+          </button>
+        
+          <button class="btn btn-lg btn-default btn-max">
+            Max
+          </button>
+          
+          Current radius: <output id="question-radius-output"></output>
+        </div><!-- .panel-body -->
+      </div><!-- .panel -->
+    </div><!-- .container -->
+  </body>
+</html>
