@@ -8,8 +8,8 @@ words: HTML, JavaScript (JS), and CSS. Knowledge of
 [Underscore](http://underscorejs.org/) is recommended but not strictly necessary. An
 introduction to these topics is outside the scope of this manual.
 
-It also assumes very basic knowledge of the terminal, a.k.a. the command prompt. How to
-open a terminal:
+This documentation also assumes very basic knowledge of the terminal, a.k.a. the command
+prompt. How to open a terminal:
 
 * [Mac OSX](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 * [Windows](http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window)
@@ -24,24 +24,24 @@ perspective, contexts are called "stories." This discrepancy in naming exists fo
 historical reasons.) Each question belongs to exactly one context. Each context can own
 number of questions.
 
-Contexts and questions are written in the standard languages of the Web: HTML, JS, and
+Contexts and questions are written in the standard languages of the web: HTML, JS, and
 CSS. Each context and each question is a single web page. Like any other web page, it
-consists of a single HTML file and any number of associated assets, such as images, CSS
-files, and JS files. The HTML file and its assets are grouped together into a folder
-layout. For example, a typical context folder might be structured like this:
+consists of a single HTML file and associated assets such as images, CSS files, and JS
+files. The HTML file and its assets are grouped together into a folder layout. For
+example, a typical context folder might be structured like this:
 
     context-name
     |-- context.html
-     -- assets
+    |-- assets
         |-- css
         |   |-- bootstrap.css
-        |    -- buttons.css
+        |   |-- buttons.css
         |-- img 
         |   |-- background.png
-        |    -- baseball.png
-         -- js
+        |   |-- baseball.png
+        |-- js
             |-- jquery.js
-             -- math.js
+            |-- math.js
 
 Although contexts and questions start out as separate web pages, they merge together in
 a process called *compilation*. This produces a single web page featuring the content from
@@ -54,14 +54,11 @@ changes the value of a variable within the context.
 
 ### Installing Ruby
 
-You need the Ruby programming language to be installed on your computer.
+The Ruby programming language must be installed on your computer.
 
-**Mac**: Ruby should be pre-installed with OS X. To verify that it is, run::
-
-    ruby -v
-
-If Ruby is installed, it'll print a version number. If not, it'll say "command not found."
-Contact Jarrett if Ruby isn't installed.
+**Mac**: Ruby should be pre-installed with OS X. To verify, run `ruby -v`. If Ruby is
+installed, it'll print a version number. If not, it'll say "command not found." Contact
+Jarrett if Ruby isn't installed.
 
 **Windows**: Try [RubyInstaller](http://rubyinstaller.org/).
 
@@ -82,15 +79,15 @@ At the start of each work session, you should ensure that the gem is up-to-date.
 ### Downloading the project folder and example code
 
 You'll be working in a project folder. All contexts and questions will be in subfolders.
-The project folder, which includes example code is available on
+The project folder, including example code, is available on
 [GitHub](https://github.com/jarrett/ns-embed-example). You can download a ZIP—look for the
 button on the right side of the page. Or, If you know how to use Git, you can get the
 example code by running:
 
     git clone https://github.com/jarrett/ns-embed-example.git
 
-Again, if you know Git, you can update to the latest example code by running this in the
-`ns-embed-example` folder:
+Again, if you know Git, you can update to the latest example code at any time by running
+this in the `ns-embed-example` folder:
 
     git pull origin master
 
@@ -99,79 +96,79 @@ You should end up with a folder layout like this:
     ns-embed-example
     |-- compiled
     |-- contexts
-    |    -- jarrett
-    |        -- example
+    |   |-- jarrett
+    |       |-- example
     |-- questions
-    |    -- jarrett
-    |        -- example
-     -- zip
+    |   |-- jarrett
+    |       |-- example
+    |-- zip
      
-Contexts are stored in `contexts/user-name/context-name`. Similarly, questions are stored
-in `questions/user-name/question-name`.
+Contexts are stored in `contexts/username/context-name`. Similarly, questions are stored
+in `questions/username/question-name`.
 
 ## Creating a context
 
 Throughout these instructions, look at the example code under `contexts/jarrett/example`.
 
 You need a subfolder of `contexts` for your Number Stories account. So if your Number
-Stories username is `pat`, create the folder `contexts/pat`. (If it doesn't already
-exist.) Within that folder, create a folder for your new context. So if your context will
+Stories username is `pat`, create the folder `contexts/pat` (if it doesn't already
+exist). Within that folder, create a folder for your new context. So if your context will
 be called "Baseball Stats", create the folder `contexts/pat/baseball-stats`. Within that
 folder, create an empty text file called `context.html`. Also within `baseball-stats`,
 create the folder `assets` with subfolders `css`, `img`, and `js`. You should have a
 folder layout like this:
 
     ns-embed-example
-     -- contexts
-        -- pat
-            -- baseball-stats
+    |-- contexts
+       |-- pat
+           |-- baseball-stats
                |-- assets
                |   |-- css
                |   |-- img
-               |    -- js
-                -- context.html
+               |   |-- js
+               |-- context.html
 
-You can put anything you want in `context.html`, so long as it's a valid HTML file.
-Usually, `context.html` will refer to stylesheets in the `css` folder, images in the `img`
-folder, and scripts in the `js` folder. Look at `contexts/jarrett/example/context.html`
-for an example.
+You can put anything you want in `context.html`, so long as you end up with a valid HTML
+document. Usually, `context.html` will refer to stylesheets in the `css` folder, images in
+the `img` folder, and scripts in the `js` folder. Look at
+`contexts/jarrett/example/context.html` for an example.
 
 ## Creating a question
 
 Throughout these instructions, look at the example code under `questions/jarrett/example`.
 
-As with contexts, create a subfolder of `questions` for your username and then a subfolder
-of that for your new question. Create a similar `assets` folder and `question.html`. You
-should have a folder layout like this:
+As with contexts, create a subfolder of `questions` for your username, then another
+subfolder for your new question. Create `question.html`, `assets/css`, `assets/img`, and
+`assets/js`. You should have a folder layout like this:
 
     ns-embed-example
     |-- contexts
-    |   -- pat
-    |       -- baseball-stats
+    |  |-- pat
+    |      |-- baseball-stats
     |          |-- assets
     |          |   |-- css
     |          |   |-- img
-    |          |    -- js
-    |           -- context.html
-     -- questions
-        -- pat
-            -- batting-average
+    |          |   |-- js
+    |          |-- context.html
+    |-- questions
+       |-- pat
+           |-- batting-average
                |-- assets
                |   |-- css
                |   |-- img
-               |    -- js
-                -- question.html
+               |   |-- js
+               |-- question.html
 
-## Testing a context or question with a development webserver
+## Testing a context or a question with a development webserver
 
 While you're working on a context or a question, you'll want to test it in the web browser.
 The `question_compiler` Ruby gem provides a *development webserver* for this purpose. So
-first, make sure you have the gem installed. See "Installing and updating the
-`question_compiler` gem" above.
+first, make sure you have the gem installed. See [Installing and updating the
+`question_compiler` gem](#installing-and-updating-the-question_compiler-gem) above.
 
 To start the webserver, open a terminal and navigate (`cd`) to the root folder of the
 context or question. For example, in the folder layout pictured above, you'd navigate to
-either `baseball-stars` or `batting-average`. Then run `qc -s` to start the server. E.g.:
+either `baseball-stats` or `batting-average`. Then run `qc -s` to start the server. E.g.:
 
     cd ns-embed-example/contexts/pat/baseball-stats
     qc -s
@@ -179,16 +176,16 @@ either `baseball-stars` or `batting-average`. Then run `qc -s` to start the serv
 A development webserver should now be running. You can access it in your browser by
 visiting:
 
-* http://localhost:3000/context.html or
-* http://localhost:3000/question.html
+* [http://localhost:3000/context.html](http://localhost:3000/context.html) or
+* [http://localhost:3000/question.html](http://localhost:3000/question.html)
 
 The server will automatically compile questions and contexts together as appropriate. See
-"Compiling with a development webserver" below.
+"[Compiling with a development webserver](#compiling-with-a-development-webserver)" below.
 
 ## Embedding a context into a question
 
-Typically, a question will *embed* exactly one context. You do this by including an *embed
-div* in `question.html`. You can find an example of this in
+Typically, a question will *embed* exactly one context. This is achieved by including an
+*embed div* in `question.html`. You can find an example in
 `questions/jarrett/example/question.html`. The embed div looks like this:
 
     <div data-embed-context="pat/baseball-stats"></div>
@@ -197,9 +194,9 @@ The `data-embed-context` attribute has two parts: the username and the context's
 code*. The username is the *author's* Number Stories username. (Remember that the user
 marked as the author isn't necessarily the one who uploaded the context.) The embed code
 is a string that you set when you upload the context. It must match the folder name in the
-layout pictured above. Embed codes should be all lower case, should not include special
-characters, and should use hyphens in place of spaces. For example, a context titled
-"Letters & Numbers" could have the embed code `letters-and-numbers`.
+folder layout pictured above. Embed codes should be all lower case, should not include
+special characters, and should use hyphens in place of spaces. For example, a context
+titled "Letters & Numbers" could have the embed code `letters-and-numbers`.
 
 When you embed a context, a few things things happen:
 
@@ -210,7 +207,7 @@ When you embed a context, a few things things happen:
 * All files in the context's `assets` folder will be copied into the question's `assets`
   folder. So be sure the filenames don't conflict.
 
-For example, consider this very simple `context.html`:
+For example, consider this minimal `context.html`:
 
     <!DOCTYPE html>
     <html>
@@ -239,7 +236,8 @@ suppose you embed the context into `question.html` like so:
       </body>
     </html>
 
-When you compile the question (see below), `question.html` will be transformed into this:
+When you compile the question ([see below](#compiling-a-question)), `question.html` will
+be transformed into this:
 
     <!DOCTYPE html>
     <html>
@@ -265,23 +263,33 @@ So far, you've learned how to specify an embedded context with
 compilation. To review: A question may *embed* exactly one context. When the question is
 *compiled*, the embedded context will be merged into the question.
 
-Now you'll learn how actually trigger the compilation. There are three ways to compile:
+Now you'll learn how to actually trigger the compilation. There are three ways to compile:
 
-1. With a development webserver
-2. Uploading to the Number Stories site
-3. Manually
+1. [With a development webserver](#compiling-with-a-development-webserver)
+2. [Uploading to the Number Stories site](#compiling-with-a-development-webserver)
+3. [Manually](#compiling-manually)
 
 ### Compiling with a development webserver
 
-Earlier, in the section "Testing a context or question with a development webserver," you
-learned how to start a development webserver. When you test a question with the webserver,
-the server automatically compiles the embedded context into the question. This happens
-every time you refresh the page.
+Earlier, in "[Testing a context or question with a development webserver]
+(#testing-a-context-or-question-with-a-development-webserver)," you learned how to start a
+development webserver. When you test a question with the webserver, the server
+automatically compiles the embedded context into the question. This happens every time you
+refresh the page.
 
 ### Compiling by uploading to the Number Stories site
 
 When you upload a JS question, the Number Stories website will automatically compile the
-question.
+question. If you download the question again, you'll get the compiled version (not the
+un-compiled version that you uploaded).
+
+The first step is to create ZIP files of your context and question. The `question_compiler`
+gem automates this process:
+
+    cd ns-embed-example
+    qc -z
+
+
 
 Warning: You can create a mismatch between the context that owns the question and the
 embed tag. For example, consider this scenario. You have two contexts: "Baseball Stats"
@@ -294,7 +302,8 @@ illogical. So it's your responsibility to make sure your embed tags are correct.
 
 ### Compiling manually
 
-If for some reason you want to, you can compile a question manually:
+If for some reason you want to, you can compile a question manually. The results go
+into the `compiled` folder. Run:
 
     cd ns-embed-example
     qc -c pat/batting-average
