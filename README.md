@@ -291,11 +291,15 @@ the compiler. Compilation will occur when you upload the ZIP file.) The
     qc -z
 
 There should now be one or more ZIP files in the `zip` folder. Questions have the
-extension `.qst.zip`, and contexts have the extension `.ctx.zip`. Log in to Number
-Stories. Create a new JavaScript context or edit an existing one. Attach the `.ctx.zip`
-file and submit the form. Under that context, create a new JavaScript question or edit an
-existing one. Attach the `.qst.zip` file and submit the form. This will trigger
-compilation.
+extension `.qst.zip`, and contexts have the extension `.ctx.zip`. Log in to Number Stories.
+
+Create a new JavaScript context or edit an existing one. Type the context's embed code
+into the form. Setting the embed code is essential. If you don't set the embed
+properly, the question won't be able to find the context at compile time. Attach the
+`.ctx.zip` file and submit the form.
+
+Under that context, create a new JavaScript question or edit an existing one. Attach the
+`.qst.zip` file and submit the form. This will trigger compilation.
 
 Visit the student view of the question. It should be compiled and working now, just like
 when you tested on your local development server.
