@@ -283,13 +283,22 @@ When you upload a JS question, the Number Stories website will automatically com
 question. If you download the question again, you'll get the compiled version (not the
 un-compiled version that you uploaded).
 
-The first step is to create ZIP files of your context and question. The `question_compiler`
-gem automates this process:
+The first step is to create ZIP files of your context and question. (This does not invoke
+the compiler. Compilation will occur when you upload the ZIP file.) The
+`question_compiler` gem automates the process of creating ZIP files:
 
     cd ns-embed-example
     qc -z
 
+There should now be one or more ZIP files in the `zip` folder. Questions have the
+extension `.qst.zip`, and contexts have the extension `.ctx.zip`. Log in to Number
+Stories. Create a new JavaScript context or edit an existing one. Attach the `.ctx.zip`
+file and submit the form. Under that context, create a new JavaScript question or edit an
+existing one. Attach the `.qst.zip` file and submit the form. This will trigger
+compilation.
 
+Visit the student view of the question. It should be compiled and working now, just like
+when you tested on your local development server.
 
 Warning: You can create a mismatch between the context that owns the question and the
 embed tag. For example, consider this scenario. You have two contexts: "Baseball Stats"
